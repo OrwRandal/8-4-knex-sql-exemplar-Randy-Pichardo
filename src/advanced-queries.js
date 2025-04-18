@@ -47,7 +47,9 @@ const orderBooksByPages = async () => {
   // You can also use DESC for descending order (largest to smallest).
   //
   // Here, we're sorting books by page count from shortest to longest.
-  // Example: ORDER BY pages DESC would give us longest to shortest. const query = `SELECT * FROM books ORDER BY pages`;
+  // Example: ORDER BY pages DESC would give us longest to shortest. 
+  const query = `SELECT * FROM books ORDER BY pages`;
+  
   const { rows } = await knex.raw(query);
   console.log('Short to long:', rows);
   return rows;
